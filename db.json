@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "name": "Sahil",
+      "email": "sahil@gamil.com",
+      "phone": "8153035756",
+      "role": "Tenant",
+      "id": "p3hoFzItuVE"
+    },
+    {
+      "name": "Landlord",
+      "email": "l@gmail.com",
+      "phone": "6353268656",
+      "role": "Landlord",
+      "id": "nFb3NfeZgaU"
+    }
+  ],
+  "properties": [
+    {
+      "id": "1O9xNE8RrGg"
+    },
+    {
+      "propertyName": "test",
+      "address": "test",
+      "propertyType": "Villa",
+      "rent": "20000",
+      "landlordId": "nFb3NfeZgaU",
+      "id": "I_gtGLrcqP4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
