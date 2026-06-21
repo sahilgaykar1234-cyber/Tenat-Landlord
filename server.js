@@ -21,33 +21,55 @@ app.post("/send-otp", async (req, res) => {
 
         const { phone } = req.body;
 
-        // const otp = Math.floor(
-        //     100000 + Math.random() * 900000
-        // );
-
-        const message = await client.messages.create({
-            body: `Sahil TEst Message`,
-            from: process.env.TWILIO_PHONE_NUMBER,
-            to: phone
-        });
-
-        // const message = await client.messages.create({
-
-        //     body: `Sahil ne OTP Bheja he ${otp}`,
-
-        //     from: "whatsapp:+14155238886",
-
-        //     to: `whatsapp:${phone}`
-
-        // });
+        const verification =
+            await client.verify.v2
+                .services(process.env.TWILIO_VERIFY_SERVICE_SID)
+                .verifications
+                .create({
+                    to: phone,
+                    channel: "sms"
+                });
 
         res.json({
             success: true,
-            sid: message.sid,
-            // otp
+            status: verification.status
         });
 
     } catch (error) {
+
+        console.log(error);
+
+        res.status(500).json({
+            success: false,
+            error: error.message
+        });
+
+    }
+
+});
+
+app.post("/verify-otp", async (req, res) => {
+
+    try {
+
+        const { phone, otp } = req.body;
+
+        const verificationCheck =
+            await client.verify.v2
+                .services(process.env.TWILIO_VERIFY_SERVICE_SID)
+                .verificationChecks
+                .create({
+                    to: phone,
+                    code: otp
+                });
+
+        res.json({
+            success: true,
+            status: verificationCheck.status
+        });
+
+    }
+    catch (error) {
 
         console.log(error);
 

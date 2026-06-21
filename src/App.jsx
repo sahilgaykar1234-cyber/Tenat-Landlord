@@ -7,6 +7,7 @@ import {
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import LandlordDashboard from "./pages/LandlordDashboard";
+import VerifyOtp from "./pages/VerifyOtp";
 // import TenantDashboard from "./pages/TenantDashboard";
 // import AdminDashboard from "./pages/AdminDashboard";
 
@@ -28,12 +29,18 @@ function App() {
                     element={<Register />}
                 />
 
-                { <Route
+                <Route
                     path="/landlord-dashboard"
                     element={<LandlordDashboard />}
                 />
 
-                /* <Route
+                { <Route
+                    path="/verify-otp"
+                    element={<VerifyOtp />}
+                />
+
+                
+                 /* <Route
                     path="/tenant-dashboard"
                     element={<TenantDashboard />}
                 />
