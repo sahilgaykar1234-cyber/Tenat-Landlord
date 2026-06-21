@@ -8,7 +8,7 @@
       "id": "p3hoFzItuVE"
     },
     {
-      "name": "Landlord",
+      "name": "Sahil",
       "email": "l@gmail.com",
       "phone": "+916353268656",
       "role": "Landlord",
@@ -26,6 +26,30 @@
       "rent": "20000",
       "landlordId": "nFb3NfeZgaU",
       "id": "I_gtGLrcqP4"
+    },
+    {
+      "propertyName": "0808",
+      "address": "Adajan",
+      "propertyType": "Row House",
+      "rent": "10000",
+      "landlordId": "nFb3NfeZgaU",
+      "id": "D7TkpZee4qM"
+    },
+    {
+      "propertyName": "0808 Property",
+      "address": "SUart",
+      "propertyType": "Apartment",
+      "rent": "10000",
+      "landlordId": "nFb3NfeZgaU",
+      "id": "lWVaiVPfCnE"
+    },
+    {
+      "propertyName": "test",
+      "address": "test",
+      "propertyType": "Row House",
+      "rent": "120",
+      "landlordId": "nFb3NfeZgaU",
+      "id": "SwYVjZFI4wo"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./VerifyOtp.css";
 
 function VerifyOtp() {
 
@@ -108,30 +109,60 @@ function VerifyOtp() {
 
     return (
 
-        <div>
+    <div className="verify-page">
 
-            <h1>Verify OTP</h1>
+        <div className="verify-left">
 
-            <input
-                type="text"
-                placeholder="Enter OTP"
-                value={otp}
-                onChange={(e) =>
-                    setOtp(e.target.value)
-                }
-            />
+            <div className="verify-left-content">
 
-            <br /><br />
+                <h1>
+                    🔐 OTP Verification
+                </h1>
 
-            <button
-                onClick={verifyOtp}
-            >
-                Verify OTP
-            </button>
+                <p>
+                    Enter the OTP sent to your
+                    registered mobile number.
+                </p>
+
+            </div>
 
         </div>
 
-    );
+        <div className="verify-right">
+
+            <div className="verify-card">
+
+                <h2>Verify OTP</h2>
+
+                <p>
+                    Please enter the OTP
+                    received on your phone.
+                </p>
+
+                <input
+                    className="verify-input"
+                    type="text"
+                    placeholder="Enter OTP"
+                    value={otp}
+                    onChange={(e) =>
+                        setOtp(e.target.value)
+                    }
+                />
+
+                <button
+                    className="verify-btn"
+                    onClick={verifyOtp}
+                >
+                    Verify OTP
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+);
 
 }
 

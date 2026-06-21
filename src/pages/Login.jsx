@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import "./Login.css";
 
 function Login() {
 
@@ -42,38 +43,62 @@ function Login() {
     };
 
     return (
+    <div className="login-page">
 
-        <div>
+        <div className="login-left">
 
-            <h1>Login</h1>
+            <div className="login-left-content">
 
-            <input
-                type="text"
-                placeholder="+919925229929"
-                value={phone}
-                onChange={(e) =>
-                    setPhone(e.target.value)
-                }
-            />
+                <h1>
+                    🏠 Property Rental
+                </h1>
 
-            <br /><br />
+                <p>
+                    Find, Rent and Manage
+                    Properties Easily.
+                </p>
 
-            <button
-                type="button"
-                onClick={sendOtp}
-            >
-                Send OTP
-            </button>
-
-            <br /><br />
-
-            <Link to="/register">
-                Register Here
-            </Link>
+            </div>
 
         </div>
 
-    );
+        <div className="login-right">
+
+            <div className="login-card">
+
+                <h2>Login</h2>
+
+                <input
+                    className="login-input"
+                    type="text"
+                    placeholder="Enter Mobile Number"
+                    value={phone}
+                    onChange={(e) =>
+                        setPhone(e.target.value)
+                    }
+                />
+
+                <button
+                    className="login-btn"
+                    onClick={sendOtp}
+                >
+                    Send OTP
+                </button>
+
+                <div className="register-link">
+
+                    <Link to="/register">
+                        Register Here
+                    </Link>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+);
 
 }
 

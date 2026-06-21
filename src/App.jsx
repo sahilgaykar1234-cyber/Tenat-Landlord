@@ -34,17 +34,17 @@ function App() {
                     element={<LandlordDashboard />}
                 />
 
+                 {/* <Route
+                    path="/tenant-dashboard"
+                    element={<TenantDashboard />}
+                /> */}
+
                 { <Route
                     path="/verify-otp"
                     element={<VerifyOtp />}
                 />
-
-                
-                 /* <Route
-                    path="/tenant-dashboard"
-                    element={<TenantDashboard />}
-                />
-
+                 
+                /*
                 <Route
                     path="/admin-dashboard"
                     element={<AdminDashboard />}
