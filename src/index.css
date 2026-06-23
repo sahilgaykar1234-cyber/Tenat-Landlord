@@ -50,20 +50,30 @@
   }
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+html[data-dashboard-theme="dark"] body {
+  background: #0b0f19;
+  color: #f1f5f9;
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 h1,
@@ -82,6 +92,7 @@ h1 {
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;

@@ -1,0 +1,1111 @@
+/* Tenant page-specific styles */
+
+.tenant-search-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tenant-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #F8FAFC;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 0 14px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tenant-search-bar:focus-within {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+    background: #fff;
+}
+
+.tenant-search-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.tenant-search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px 0;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #0F172A;
+    outline: none;
+}
+
+.tenant-search-bar input::placeholder {
+    color: #94A3B8;
+}
+
+.tenant-search-clear {
+    border: none;
+    background: #E2E8F0;
+    color: #64748B;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tenant-search-clear:hover {
+    background: #CBD5E1;
+    color: #334155;
+}
+
+.tenant-location-filter-inner {
+    padding-top: 4px;
+    border-top: 1px solid #F1F5F9;
+}
+
+.tenant-location-filter-inner .tenant-location-filter-head {
+    margin-top: 12px;
+}
+
+.tenant-location-filter-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.tenant-location-filter-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.tenant-location-clear {
+    border: none;
+    background: none;
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.tenant-location-clear:hover {
+    text-decoration: underline;
+}
+
+.tenant-location-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tenant-location-chip {
+    border: 1.5px solid #E2E8F0;
+    background: #F8FAFC;
+    color: #475569;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.tenant-location-chip:hover {
+    border-color: #CBD5E1;
+    color: #0F172A;
+}
+
+.tenant-location-chip.active {
+    background: #0f172a;
+    border-color: #0f172a;
+    color: #fff;
+}
+
+.tenant-location-empty-btn {
+    margin-top: 14px;
+    border: none;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.tenant-location-empty-btn:hover {
+    background: #047857;
+}
+
+.tenant-property-grid {
+    display: grid;
+    gap: clamp(16px, 2vw, 24px);
+    width: 100%;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .tenant-property-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .tenant-property-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1440px) {
+    .tenant-property-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.tenant-property-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 18px 20px 20px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    font-family: inherit;
+    outline: none;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.04);
+}
+
+.tenant-property-card:focus-visible {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.tenant-property-card:hover {
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    transform: translateY(-2px);
+    border-color: rgba(99, 102, 241, 0.22);
+}
+
+.tenant-property-grid:has(> .tenant-property-card:only-child) {
+    grid-template-columns: 1fr;
+}
+
+.tenant-property-grid:has(> .tenant-property-card:only-child) .tenant-property-card {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.tenant-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.tenant-card-type {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.tenant-card-fav-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #BE185D;
+    background: #FCE7F3;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.tenant-card-name {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #0F172A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tenant-card-address {
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: #64748B;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tenant-card-rent {
+    font-size: 22px;
+    font-weight: 800;
+    color: #059669;
+    margin-bottom: 4px;
+}
+
+.tenant-card-rent span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #94A3B8;
+}
+
+.tenant-card-status {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 999px;
+}
+
+.tenant-card-status.meeting {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.tenant-card-status.deal {
+    background: #DBEAFE;
+    color: #1D4ED8;
+}
+
+.tenant-card-status.pending {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.tenant-card-view-hint {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2563EB;
+}
+
+.badge-villa { background: #FEF3C7; color: #92400E; }
+.badge-apartment { background: #EFF6FF; color: #1D4ED8; }
+.badge-rowhouse { background: #F0FDF4; color: #166534; }
+.badge-default { background: #F1F5F9; color: #475569; }
+
+.tenant-property-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(12px, 2vw, 24px);
+}
+
+.tenant-property-modal {
+    position: relative;
+    width: min(1280px, 100%);
+    height: min(88vh, 760px);
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(15, 23, 42, 0.35);
+    display: flex;
+    flex-direction: column;
+}
+
+.tenant-property-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #334155;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.2);
+}
+
+.tenant-property-modal-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    height: 100%;
+    min-height: 0;
+}
+
+.tenant-property-modal-gallery {
+    background: #0B1220;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+}
+
+.tenant-modal-main-photo {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: radial-gradient(circle at center, #1E293B 0%, #0B1220 100%);
+}
+
+.tenant-modal-main-photo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.tenant-modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #0F172A;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.tenant-modal-nav.prev { left: 14px; }
+.tenant-modal-nav.next { right: 14px; }
+
+.tenant-modal-photo-counter {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background: rgba(15, 23, 42, 0.72);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 999px;
+}
+
+.tenant-modal-thumbs {
+    display: flex;
+    gap: 10px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    background: #111827;
+    flex-shrink: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tenant-modal-thumb {
+    flex: 0 0 88px;
+    height: 64px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+.tenant-modal-thumb:hover {
+    opacity: 0.85;
+}
+
+.tenant-modal-thumb.active {
+    border-color: #10B981;
+    opacity: 1;
+}
+
+.tenant-modal-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tenant-modal-no-photo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #CBD5E1;
+}
+
+.tenant-modal-no-photo span {
+    font-size: 56px;
+}
+
+.tenant-modal-no-photo p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.tenant-property-modal-details {
+    padding: 32px 28px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.tenant-modal-address {
+    margin: 0 0 16px;
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+.tenant-modal-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+}
+
+.tenant-property-modal-details h2 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #0F172A;
+    line-height: 1.2;
+}
+
+.tenant-modal-rent {
+    font-size: 28px;
+    font-weight: 800;
+    color: #059669;
+    margin-bottom: 22px;
+}
+
+.tenant-modal-rent span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #94A3B8;
+}
+
+.tenant-modal-info-grid {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.tenant-modal-info-item {
+    display: grid;
+    gap: 4px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.tenant-modal-info-item span {
+    font-size: 12px;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+
+.tenant-modal-info-item strong {
+    font-size: 14px;
+    color: #0F172A;
+    line-height: 1.5;
+}
+
+.tenant-modal-actions {
+    margin-top: auto;
+    padding-top: 16px;
+    display: flex;
+    gap: 10px;
+}
+
+.tenant-modal-actions .tenant-fav-btn,
+.tenant-modal-actions .tenant-inquiry-btn {
+    flex: 1;
+}
+
+.tenant-fav-btn,
+.tenant-inquiry-btn {
+    flex: 1;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.15s ease;
+}
+
+.tenant-fav-btn {
+    background: #FFF1F2;
+    color: #E11D48;
+}
+
+.tenant-fav-btn:hover {
+    background: #FFE4E6;
+}
+
+.tenant-fav-btn.active {
+    background: #FFE4E6;
+    color: #BE123C;
+}
+
+.tenant-inquiry-btn {
+    background: #EFF6FF;
+    color: #2563EB;
+}
+
+.tenant-inquiry-btn:hover {
+    background: #DBEAFE;
+}
+
+.tenant-inquiry-btn.disabled,
+.tenant-inquiry-btn:disabled {
+    background: #F1F5F9;
+    color: #94A3B8;
+    cursor: not-allowed;
+}
+
+.tenant-inquiry-btn.disabled:hover,
+.tenant-inquiry-btn:disabled:hover {
+    background: #F1F5F9;
+}
+
+.tenant-empty {
+    text-align: center;
+    padding: 80px 24px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    width: 100%;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.04);
+}
+
+.tenant-empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.tenant-empty h3 {
+    font-size: 20px;
+    color: #0F172A;
+    margin-bottom: 8px;
+}
+
+.tenant-empty p {
+    color: #64748B;
+    font-size: 14px;
+}
+
+.tenant-updates-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+    border: 1px solid #A7F3D0;
+    color: #065F46;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.tenant-updates-banner button {
+    background: #059669;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.tenant-tab-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    margin-left: 6px;
+    background: #EF4444;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.tenant-meeting-alert,
+.tenant-inquiry-pending {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 8px;
+    line-height: 1.4;
+}
+
+.tenant-meeting-alert {
+    background: #ECFDF5;
+    color: #065F46;
+    border: 1px solid #A7F3D0;
+}
+
+.tenant-inquiry-pending {
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+}
+
+.tenant-inquiry-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: clamp(16px, 2vw, 24px);
+    width: 100%;
+}
+
+.tenant-inquiry-card {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 20px 22px;
+}
+
+.tenant-inquiry-card.meeting-requested {
+    border-color: #6EE7B7;
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.12);
+}
+
+.tenant-inquiry-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.tenant-inquiry-card-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0F172A;
+}
+
+.tenant-inquiry-status {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.tenant-inquiry-status.status-pending {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.tenant-inquiry-status.status-meeting-requested {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.tenant-meeting-banner {
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 14px;
+}
+
+.tenant-meeting-banner strong {
+    display: block;
+    color: #065F46;
+    margin-bottom: 6px;
+}
+
+.tenant-meeting-banner p {
+    margin: 0;
+    font-size: 13px;
+    color: #047857;
+    line-height: 1.5;
+}
+
+.tenant-inquiry-waiting {
+    margin: 0 0 14px;
+    font-size: 13px;
+    color: #64748B;
+}
+
+.tenant-inquiry-meta {
+    display: grid;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid #F1F5F9;
+}
+
+.tenant-inquiry-meta-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+}
+
+.tenant-inquiry-meta-row span {
+    color: #64748B;
+}
+
+.tenant-inquiry-meta-row strong {
+    color: #0F172A;
+    text-align: right;
+    word-break: break-all;
+}
+
+.tenant-inquiry-card.deal-closed {
+    border-color: #BFDBFE;
+}
+
+.tenant-inquiry-status.status-deal-closed {
+    background: #DBEAFE;
+    color: #1D4ED8;
+}
+
+.tenant-inquiry-status.status-tenant-left {
+    background: #F1F5F9;
+    color: #475569;
+}
+
+.tenant-inquiry-status.status-property-rented {
+    background: #FEE2E2;
+    color: #B91C1C;
+}
+
+.tenant-inquiry-card.tenant-left {
+    border-color: #CBD5E1;
+}
+
+.tenant-left-banner {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 14px;
+}
+
+.tenant-left-banner strong {
+    display: block;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.tenant-left-banner p {
+    margin: 0;
+    font-size: 13px;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+.tenant-leave-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 11px 16px;
+    border: 1.5px solid #CBD5E1;
+    border-radius: 10px;
+    background: #fff;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.tenant-leave-btn:hover {
+    background: #F8FAFC;
+    border-color: #94A3B8;
+    color: #0F172A;
+}
+
+.tenant-rent-banner {
+    margin-bottom: 14px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.tenant-rent-banner.rent-due {
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    color: #065F46;
+}
+
+.tenant-rent-banner.rent-paid {
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    color: #166534;
+}
+
+.tenant-rent-banner strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.tenant-rent-banner p {
+    margin: 0 0 12px;
+    font-size: 13px;
+}
+
+.tenant-rent-pay-btn {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #059669;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.tenant-rent-pay-btn:hover:not(:disabled) {
+    background: #047857;
+}
+
+.tenant-rent-pay-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.tenant-rent-history {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.tenant-rent-history > span {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.tenant-rent-history-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+    padding: 6px 0;
+}
+
+.tenant-deal-closed-alert {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #EFF6FF;
+    color: #1D4ED8;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.tenant-payment-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    color: #92400E;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.tenant-payment-banner button {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #92400E;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tenant-deal-banner {
+    margin-bottom: 14px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.tenant-deal-banner.payment-due {
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+    color: #92400E;
+}
+
+.tenant-deal-banner.payment-done {
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    color: #047857;
+}
+
+.tenant-deal-banner strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.tenant-deal-banner p {
+    margin: 0 0 12px;
+    font-size: 13px;
+}
+
+.tenant-payment-breakdown {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px 16px;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+}
+
+.tenant-payment-breakdown strong {
+    text-align: right;
+}
+
+.tenant-pay-btn {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #2563EB;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.tenant-pay-btn:hover:not(:disabled) {
+    background: #1D4ED8;
+}
+
+.tenant-pay-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.tenant-payment-paid-note {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .tenant-navbar {
+        padding: 0 20px;
+    }
+
+    .tenant-container {
+        padding: 24px 20px 40px;
+    }
+
+    .tenant-header {
+        flex-direction: column;
+    }
+
+    .tenant-user-name {
+        display: none;
+    }
+
+    .tenant-property-modal-overlay {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .tenant-property-modal {
+        width: 100%;
+        height: 94vh;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .tenant-property-modal-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    .tenant-property-modal-gallery {
+        min-height: 45vh;
+    }
+
+    .tenant-modal-main-photo {
+        padding: 12px;
+    }
+
+    .tenant-property-modal-details {
+        padding: 20px 18px 28px;
+        max-height: 45vh;
+    }
+
+    .tenant-property-modal-details h2 {
+        font-size: 22px;
+    }
+
+    .tenant-modal-rent {
+        font-size: 24px;
+    }
+
+    .tenant-modal-actions {
+        flex-direction: column;
+    }
+
+    .tenant-property-grid:has(> .tenant-property-card:only-child) .tenant-property-card {
+        max-width: none;
+    }
+}

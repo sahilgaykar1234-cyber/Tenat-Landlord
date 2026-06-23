@@ -6,10 +6,11 @@ import {
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import LandlordDashboard from "./pages/LandlordDashboard";
 import VerifyOtp from "./pages/VerifyOtp";
-// import TenantDashboard from "./pages/TenantDashboard";
-// import AdminDashboard from "./pages/AdminDashboard";
+import LandlordDashboard from "./pages/LandlordDashboard";
+import TenantDashboard from "./pages/TenantDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
 
@@ -31,25 +32,35 @@ function App() {
 
                 <Route
                     path="/landlord-dashboard"
-                    element={<LandlordDashboard />}
+                    element={
+                        <ProtectedRoute allowedRole="Landlord">
+                            <LandlordDashboard />
+                        </ProtectedRoute>
+                    }
                 />
 
-                 {/* <Route
+                <Route
                     path="/tenant-dashboard"
-                    element={<TenantDashboard />}
-                /> */}
+                    element={
+                        <ProtectedRoute allowedRole="Tenant">
+                            <TenantDashboard />
+                        </ProtectedRoute>
+                    }
+                />
 
-                { <Route
+                <Route
+                    path="/admin-dashboard"
+                    element={
+                        <ProtectedRoute allowedRole="Admin">
+                            <AdminDashboard />
+                        </ProtectedRoute>
+                    }
+                />
+
+                <Route
                     path="/verify-otp"
                     element={<VerifyOtp />}
                 />
-                 
-                /*
-                <Route
-                    path="/admin-dashboard"
-                    element={<AdminDashboard />}
-                /> */}
-
             </Routes>
 
         </BrowserRouter>

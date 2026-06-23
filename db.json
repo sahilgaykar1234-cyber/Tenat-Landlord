@@ -1,56 +1,24 @@
 {
   "users": [
     {
-      "name": "Sahil",
-      "email": "sahil@gamil.com",
-      "phone": "8153035756",
-      "role": "Tenant",
-      "id": "p3hoFzItuVE"
+      "name": "Platform Admin",
+      "email": "admin@propmanager.com",
+      "phone": "+919999999999",
+      "role": "Admin",
+      "id": "admin001"
     },
     {
-      "name": "Sahil",
-      "email": "l@gmail.com",
+      "name": "Sahil Gaykar",
+      "email": "sahil.gaykar@ezeetechnosys.com",
       "phone": "+916353268656",
       "role": "Landlord",
-      "id": "nFb3NfeZgaU"
+      "id": "nW_AjaP0kiA"
     }
   ],
-  "properties": [
-    {
-      "id": "1O9xNE8RrGg"
-    },
-    {
-      "propertyName": "test",
-      "address": "test",
-      "propertyType": "Villa",
-      "rent": "20000",
-      "landlordId": "nFb3NfeZgaU",
-      "id": "I_gtGLrcqP4"
-    },
-    {
-      "propertyName": "0808",
-      "address": "Adajan",
-      "propertyType": "Row House",
-      "rent": "10000",
-      "landlordId": "nFb3NfeZgaU",
-      "id": "D7TkpZee4qM"
-    },
-    {
-      "propertyName": "0808 Property",
-      "address": "SUart",
-      "propertyType": "Apartment",
-      "rent": "10000",
-      "landlordId": "nFb3NfeZgaU",
-      "id": "lWVaiVPfCnE"
-    },
-    {
-      "propertyName": "test",
-      "address": "test",
-      "propertyType": "Row House",
-      "rent": "120",
-      "landlordId": "nFb3NfeZgaU",
-      "id": "SwYVjZFI4wo"
-    }
-  ],
+  "properties": [],
+  "favorites": [],
+  "inquiries": [],
+  "deals": [],
+  "rentPayments": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

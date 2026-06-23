@@ -1,4 +1,4 @@
-.verify-page {
+.register-page {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -6,7 +6,7 @@
     font-family: system-ui, "Segoe UI", Roboto, sans-serif;
 }
 
-.verify-left {
+.register-left {
     flex: 1;
     background: linear-gradient(135deg, #2563eb, #1e40af);
     color: #fff;
@@ -16,30 +16,36 @@
     padding: 40px;
 }
 
-.verify-left-content h1 {
+.register-left-content {
+    max-width: 420px;
+    text-align: center;
+}
+
+.register-left-content h1 {
     font-size: clamp(28px, 4vw, 40px);
     margin-bottom: 15px;
     color: #fff;
     font-weight: 600;
 }
 
-.verify-left-content p {
+.register-left-content p {
     font-size: 18px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
 }
 
-.verify-right {
+.register-right {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 24px;
+    background: #f5f7fb;
 }
 
-.verify-card {
+.register-card {
     width: 100%;
-    max-width: 400px;
+    max-width: 440px;
     background: #fff;
     padding: 35px;
     border-radius: 12px;
@@ -47,41 +53,74 @@
     color-scheme: light;
 }
 
-.verify-card h2 {
+.register-card h2 {
     text-align: center;
-    margin-bottom: 10px;
+    margin: 0 0 8px;
     color: #1e293b;
     font-size: 28px;
     font-weight: 600;
 }
 
-.verify-card p {
+.register-subtitle {
     text-align: center;
     color: #64748b;
-    margin-bottom: 20px;
     font-size: 14px;
+    margin-bottom: 28px;
 }
 
-.verify-input {
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.register-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.register-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.register-input {
     width: 100%;
     padding: 12px 14px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
-    margin-bottom: 15px;
     background: #fff;
     color: #1e293b;
     font-size: 16px;
     outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit;
 }
 
-.verify-input:focus {
+.register-input::placeholder {
+    color: #9ca3af;
+}
+
+.register-input:focus {
     border-color: #2563eb;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
-.verify-btn {
+.register-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+}
+
+.register-btn {
     width: 100%;
     padding: 12px;
+    margin-top: 4px;
     border: none;
     background: #2563eb;
     color: #fff;
@@ -89,39 +128,48 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
+    transition: background 0.2s;
+    font-family: inherit;
 }
 
-.verify-btn:hover:not(:disabled) {
+.register-btn:hover:not(:disabled) {
     background: #1d4ed8;
 }
 
-.verify-btn:disabled {
+.register-btn:disabled {
     opacity: 0.7;
     cursor: not-allowed;
 }
 
-.register-link {
+.login-link {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #64748b;
 }
 
-.register-link a {
+.login-link a {
     color: #2563eb;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-.register-link a:hover {
+.login-link a:hover {
     text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    .verify-page {
+    .register-page {
         flex-direction: column;
     }
 
-    .verify-left {
+    .register-left {
         min-height: 200px;
         padding: 32px 24px;
+    }
+
+    .register-right {
+        flex: 1;
+        padding: 32px 20px;
     }
 }
